@@ -2,8 +2,8 @@
 #     local image or video loader
 
 ```
-Fetcher.putFilter(FetcherMIME.GIF);
-Fetcher.start(MainActivity.this, getBaseContext(), FetcherKey.MEDIA_ALL, MainActivity.this);
+Fetcher.putFilter(FetcherMIME.XXX);
+Fetcher.start(LifecycleOwner & ViewModelStoreOwner, Context, FetcherKey.XXX, FetcherResponse);
 ```
 ```
 Fetcher.destroy();
