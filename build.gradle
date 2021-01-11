@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    android = [
+            applicationId    : 'com.abcq.ffmm',
+            compileSdkVersion: 28,
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 11,
+            versionName      : '1.1.0',
+
+            appcompat        : 'androidx.appcompat:appcompat:1.0.2',
+            recyclerview     : 'androidx.recyclerview:recyclerview:1.1.0',
+    ]
+    dependencies = [
+            glide          : 'com.github.bumptech.glide:glide:4.9.0',
+            glide_compiler: 'com.github.bumptech.glide:compiler:4.9.0',
+    ]
+}
